@@ -21,4 +21,12 @@ class Guess
     end
   end
 
+  def feedback(guess, card)
+    if correct?(guess.response, card)
+      "Correct."
+    else
+      "Incorrect."
+    end
+  end
+
 end
