@@ -8,7 +8,7 @@ class DeckTest < Minitest::Test
     card_1 = Card.new("10", "Hearts")
     card_2 = Card.new("9", "Diamonds")
     card_3 = Card.new("8", "Spades")
-    deck = Deck.new(card_1, card_2, card_3)
+    deck = Deck.new([card_1, card_2, card_3])
     assert_instance_of Deck, deck
   end
 
@@ -16,8 +16,16 @@ class DeckTest < Minitest::Test
     card_1 = Card.new("10", "Hearts")
     card_2 = Card.new("9", "Diamonds")
     card_3 = Card.new("8", "Spades")
-    deck = Deck.new(card_1, card_2, card_3)
+    deck = Deck.new([card_1, card_2, card_3])
     assert_equal 3, deck.count
+  end
+
+  def test_cards
+    card_1 = Card.new("10", "Hearts")
+    card_2 = Card.new("9", "Diamonds")
+    card_3 = Card.new("8", "Spades")
+    deck = Deck.new([card_1, card_2, card_3])
+    assert_equal [card_1, card_2, card_3], deck.cards
   end
 
 

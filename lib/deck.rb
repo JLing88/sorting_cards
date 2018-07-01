@@ -4,12 +4,22 @@ class Deck
 
   attr_accessor :cards
 
-  def initialize(card_1, card_2, card_3)
-    @cards = [card_1, card_2, card_3]
+  def initialize(cards)
+    @cards = cards
   end
 
   def count
     @count = @cards.length
+  end
+
+  def sort
+    length = @cards.length
+
+    loop do
+      swapped = true
+
+      length-1.times
+
   end
 
 end
