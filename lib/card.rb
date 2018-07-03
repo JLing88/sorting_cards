@@ -6,7 +6,7 @@ class Card
     @suit = suit
   end
 
-  def get_card_value(value, suit)
+  def get_card_value
 
     value_hash = {"Ace"   => 14,
                   "King"  => 13,
@@ -26,7 +26,7 @@ class Card
                   "Diamonds"  => 0.2,
                   "Clubs"     => 0.1}
 
-    card_value = value_hash[value] + suit_hash[suit]
+    card_value = value_hash[@value] + suit_hash[@suit]
   end
 
 end
