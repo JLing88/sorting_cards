@@ -22,7 +22,7 @@ class CardTest < Minitest::Test
     card_1 = Card.new("10", "Hearts")
     card_2 = Card.new("Ace", "Hearts")
     assert_equal 10.3, card_1.get_card_value
-    assert_equal 14.3, card_1.get_card_value
+    assert_equal 14.3, card_2.get_card_value
   end
 
 end
