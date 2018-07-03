@@ -18,4 +18,11 @@ class CardTest < Minitest::Test
     assert_equal "Clubs", card.suit
   end
 
+  def test_get_card_value
+    card_1 = Card.new("10", "Hearts")
+    card_2 = Card.new("Ace", "Hearts")
+    assert_equal 10.3, card_1.get_card_value(card_1.value, card_1.suit)
+    assert_equal 14.3, card_1.get_card_value(card_2.value, card_2.suit)
+  end
+
 end
