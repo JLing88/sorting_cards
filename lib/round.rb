@@ -33,9 +33,4 @@ class Round
   def number_correct
     @number_correct
   end
-
-  def get_card_value
-
-  end
-
 end
