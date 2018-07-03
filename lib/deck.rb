@@ -18,7 +18,10 @@ class Deck
     loop do
       swapped = true
 
-      length-1.times
+      length-1.times do |item|
+        
+
+      end
 
   end
 
