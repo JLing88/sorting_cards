@@ -2,7 +2,9 @@ require "./lib/guess.rb"
 
 class Round
 
-  attr_accessor :deck, :guesses
+  attr_accessor :deck,
+                :guesses,
+                :number_correct
 
   def initialize(deck)
     @deck = deck
@@ -18,7 +20,7 @@ class Round
   def record_guess(hash)
     card = Card.new(hash[:value], hash[:suit])
     guess = Guess.new("#{card.value} of #{card.suit}", current_card)
-    @guesses << guess
+    guesses << guess
     @current_card += 1
     if guess.response == "#{guess.card.value} of #{guess.card.suit}"
       @number_correct += 1
@@ -27,7 +29,7 @@ class Round
   end
 
   def count
-    @guesses.length
+    guesses.length
   end
 
   def number_correct
