@@ -2,7 +2,8 @@ require "./lib/deck.rb"
 
 class Guess
 
-  attr_accessor :response, :card
+  attr_accessor :response,
+                :card
 
   def initialize(response, card)
     @response = response
