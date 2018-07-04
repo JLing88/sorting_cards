@@ -21,7 +21,7 @@ class Card
                   "4"     => 4,
                   "3"     => 3,
                   "2"     => 2}
-    suit_hash = {"Spades"    => 0.4,
+    suit_hash = {"Spades"     => 0.4,
                   "Hearts"    => 0.3,
                   "Diamonds"  => 0.2,
                   "Clubs"     => 0.1}
