@@ -46,14 +46,19 @@ class DeckTest < Minitest::Test
     card_4 = Card.new("Ace", "Spades")
     card_5 = Card.new("Ace", "Diamonds")
     deck = Deck.new([card_1, card_2, card_3, card_4, card_5])
-    deck.merge_sort
-    assert_equal ([card_1, card_3, card_2, card_5, card_4]), deck.cards
+
+    assert_equal ([card_1, card_3, card_2, card_5, card_4]), deck.merge_sort(@cards)
   end
 
   def test_merge
-    array_1 = [1, 3, 4, 7]
-    array_2 = [2, 5, 6, 8]
-    merge(array_1, array_2)
-    assert_equal [1,2,3,4,5,6,7,8],
+    card_1 = Card.new("4", "Hearts")
+    card_2 = Card.new("Jack", "Clubs")
+    card_3 = Card.new("5", "Diamonds")
+    card_4 = Card.new("Ace", "Spades")
+    card_5 = Card.new("Ace", "Diamonds")
+    deck = Deck.new([card_1, card_2, card_3, card_4, card_5])
+    left_deck = deck.cards[0..2]
+    right_deck = deck.cards[3..4]
+    assert_equal ([card_1, card_3, card_2, card_5, card_4]), deck.merge(left_deck, right_deck)
   end
 end
