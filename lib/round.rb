@@ -3,8 +3,9 @@ require "./lib/guess.rb"
 class Round
 
   attr_accessor :deck,
-                :guesses,
-                :number_correct
+                :guesses
+
+  attr_writer :number_correct
 
   def initialize(deck)
     @deck = deck
