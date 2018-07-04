@@ -25,6 +25,6 @@ class Card
                   "Diamonds"  => 0.2,
                   "Clubs"     => 0.1}
 
-    card_value = value_hash[@value] + suit_hash[@suit]
+    card_value = value_hash[value] + suit_hash[suit]
   end
 end
