@@ -31,12 +31,12 @@ class Deck
 
   def merge_sort(cards)
 
-    if deck.cards.length < 1
-      return deck
+    if cards.length <= 1
+      return cards
     elsif
-      midpoint = (deck.cards.length/2).floor
-      left_deck = merge_sort(deck.cards[0...midpoint])
-      right_deck = merge_sort(deck.cards[midpoint..deck.cards.length])
+      midpoint = (cards.length/2).floor
+      left_deck = merge_sort(cards[0..midpoint-1])
+      right_deck = merge_sort(cards[midpoint..cards.length])
       merge(left_deck, right_deck)
     end
 
@@ -45,9 +45,9 @@ class Deck
 
     def merge(left_deck, right_deck)
 
-      if left_deck.empty?
+      if left_deck.length == 0
         return right_deck
-      elsif right_deck.empty?
+      elsif right_deck.length == 0
         return left_deck
       elsif left_deck[0].get_card_value < right_deck[0].get_card_value
         [left_deck[0]] + merge(left_deck[1..left_deck.length], right_deck)
