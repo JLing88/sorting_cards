@@ -63,7 +63,7 @@ class Deck
       elsif left_deck[0].get_card_value < right_deck[0].get_card_value
         [left_deck[0]] + merge(left_deck[1..left_deck.length], right_deck)
       else
-      #same as above, but reversed
+        #same as above, but reversed
         [right_deck[0]] + merge(left_deck, right_deck[1..right_deck.length])
       end
 
