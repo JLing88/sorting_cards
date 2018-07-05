@@ -14,7 +14,7 @@ class Deck
 
   def sort
 
-    length = @cards.length
+    length = count
     swapped = true
 
     while swapped do
