@@ -59,8 +59,8 @@ class RoundTest < Minitest::Test
     round = Round.new(deck)
     round.record_guess({value: "3", suit: "Hearts"})
     assert_equal 1, round.number_correct
-    round.record_guess({value: "4", suit: "Clubs"})
-    assert_equal 2, round.number_correct
+    round.record_guess({value: "Ace", suit: "Clubs"})
+    assert_equal 1, round.number_correct
   end
 
   def test_percent_correct
@@ -70,8 +70,8 @@ class RoundTest < Minitest::Test
     round = Round.new(deck)
     round.record_guess({value: "3", suit: "Hearts"})
     assert_equal 1, round.number_correct
-    round.record_guess({value: "4", suit: "Clubs"})
-    assert_equal 50, round.number_correct
+    round.record_guess({value: "Ace", suit: "Clubs"})
+    assert_equal 50, round.percent_correct
 
   end
 end
